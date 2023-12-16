@@ -1,9 +1,14 @@
+
+                                    #1st Program in Python
+
 # print("Hello world!!!",45,00)
 # print(22+34)
 
 # print("number ",45,566, sep=" - ")
 
 
+                                    # Variables in Python
+  
 # a = 1234
 # b = "abc"
 # c = True
@@ -17,12 +22,16 @@
 # print(a+b)
 # print(b+c)
 
+                                      # Data types in Python
+   
 # print("the type of a is ", type(a))
 # print("the type of b is ", type(b))
 # print("the type of c is ", type(c))
 # print("the type of list1 is ", type(list1))
 
 
+
+                                # Operators and calculations in Python
 
 # num1 = 23
 # num2 = 45
@@ -37,22 +46,39 @@
 
 
 
-from numpy import double
+
+                                   # Type casting in Python
+
+# from numpy import double
+# a = "12"
+# b = "123"
+# c = 12.2
+# d = "12.34"
+
+# print(a+b)
+# print(int(a)+int(b))
+# print (int(c))
+# print(int(c) + double(d))
+
+# x = 1.9
+# y = 2.7
+# z = 3.32322
+
+# print(x+y+z)
 
 
-a = "12"
-b = "123"
-c = 12.2
-d = "12.34"
-
-print(a+b)
-print(int(a)+int(b))
-print (int(c))
-print(int(c) + double(d))
 
 
-x = 1.9
-y = 2.7
-z = 3.32322
+                                 # User Input in Python
 
-print(x+y+z)
+# print("input your value ")
+# var  = input("Input your value ")
+# print("Your inputed value is :",var)
+
+
+x = input("Input your 1st number ")
+y = input("Input your 2nd number ")
+
+print(x + y)                                      # consider it as a string
+print (int(x) + int(y))                             # It will work Fine 
+
