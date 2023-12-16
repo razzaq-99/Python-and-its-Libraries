@@ -35,3 +35,24 @@
 
 # print("the division of ",num1 , " and ", num2 , " is " , num1/num2)
 
+
+
+from numpy import double
+
+
+a = "12"
+b = "123"
+c = 12.2
+d = "12.34"
+
+print(a+b)
+print(int(a)+int(b))
+print (int(c))
+print(int(c) + double(d))
+
+
+x = 1.9
+y = 2.7
+z = 3.32322
+
+print(x+y+z)
