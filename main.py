@@ -76,9 +76,33 @@
 # print("Your inputed value is :",var)
 
 
-x = input("Input your 1st number ")
-y = input("Input your 2nd number ")
+# x = input("Input your 1st number ")
+# y = input("Input your 2nd number ")
 
-print(x + y)                                      # consider it as a string
-print (int(x) + int(y))                             # It will work Fine 
+# print(x + y)                                      # consider it as a string
+# print (int(x) + int(y))                             # It will work Fine 
 
+
+
+
+
+                                 # Strings in Python
+ 
+str1 = "Abdul"
+str2 = 'Ali'
+str3 = '''Hello My Name is Ahmed
+ALi and "I live in Canada
+and Pakistan" '''                             
+
+# print(str1)
+# print(str2)
+# print(str3)
+
+
+# print(str1[0])
+
+for character in str1 :
+    print(character)
+
+for character in str2:
+    print(character)
