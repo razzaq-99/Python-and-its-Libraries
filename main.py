@@ -128,7 +128,7 @@
     
                         # Methods of String in Python
                         
-car = "civic 2023"
+# car = "civic 2023"
 
 # print(len(car))      
 
@@ -156,6 +156,53 @@ car = "civic 2023"
 
 # print(car.islower())
 
-print(car.startswith("2023"))
+# print(car.startswith("2023"))
     
     
+    
+    
+    
+    
+                               # If else Statements in Python
+                               
+# age = int(input("Input your age "))
+# print("Your age is ",age)                   
+
+# if(age>18 & age<100):
+#     print("You can vote")
+    
+# elif(age==18):
+#     print("Still you can not vote")    
+# else :
+#     print("You can not Vote")                
+
+
+# num = int(input("inter your number "))
+
+# if(num>0):
+#     print("The number is positive =",num)
+
+# elif(num==0):
+#     print("The number is zero =",num)
+    
+# else:
+#     print("The number is negative =",num)        
+
+
+import time
+
+timestamp = time.strftime('%H:%M:%S')
+
+print(timestamp)
+
+# Extract hours from the timestamp and convert it to an integer
+hours = int(timestamp.split(':')[0])
+
+if hours < 12:
+    print("Good Morning!")
+    
+elif hours < 18:
+    print("Good Evening!")
+    
+else:
+    print("Good Night")
