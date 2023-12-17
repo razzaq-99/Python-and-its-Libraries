@@ -88,11 +88,11 @@
 
                                  # Strings in Python
  
-str1 = "Abdul"
-str2 = 'Ali'
-str3 = '''Hello My Name is Ahmed
-ALi and "I live in Canada
-and Pakistan" '''                             
+# str1 = "Abdul"
+# str2 = 'Ali'
+# str3 = '''Hello My Name is Ahmed
+# ALi and "I live in Canada
+# and Pakistan" '''                             
 
 # print(str1)
 # print(str2)
@@ -101,8 +101,61 @@ and Pakistan" '''
 
 # print(str1[0])
 
-for character in str1 :
-    print(character)
+# for character in str1 :
+#     print(character)
 
-for character in str2:
-    print(character)
+# for character in str2:
+#     print(character)
+
+
+
+                   # Strings Slicing and Operations in Python
+                   
+# Name = 'Ahmed khan'
+# print(len(Name))  
+
+# print(Name[0:5])         #Slicing     
+# print(Name[:10])
+# print(Name[:3])
+# print(Name[0:-4])
+# print(Name[-4:-1])
+
+# for character in Name :
+    # print(character)
+    
+    
+    
+    
+                        # Methods of String in Python
+                        
+car = "civic 2023"
+
+# print(len(car))      
+
+# print(car.upper())   
+
+# print(car.lower())   
+  
+# print(car.rstrip('!')) 
+        
+# print(car.replace("Civic","Toyota")) 
+
+# print(car.split())
+
+# print(car.capitalize())
+
+# print(car.splitlines())
+  
+# print(car.swapcase())  
+
+# print(car.find("c"))
+
+# print(car.count('c'))
+
+# print(car.endswith("2023"))
+
+# print(car.islower())
+
+print(car.startswith("2023"))
+    
+    
