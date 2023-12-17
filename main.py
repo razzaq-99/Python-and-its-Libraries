@@ -189,20 +189,67 @@
 #     print("The number is negative =",num)        
 
 
-import time
+# import time
 
-timestamp = time.strftime('%H:%M:%S')
+# timestamp = time.strftime('%H:%M:%S')
 
-print(timestamp)
+# print(timestamp)
 
-# Extract hours from the timestamp and convert it to an integer
-hours = int(timestamp.split(':')[0])
+# # Extract hours from the timestamp and convert it to an integer
+# hours = int(timestamp.split(':')[0])
 
-if hours < 12:
-    print("Good Morning!")
+# if hours < 12:
+#     print("Good Morning!")
     
-elif hours < 18:
-    print("Good Evening!")
+# elif hours < 18:
+#     print("Good Evening!")
     
-else:
-    print("Good Night")
+# else:
+#     print("Good Night")
+
+
+
+
+
+
+                                 # Loops in Python
+                                 
+# name = "Razzaq"
+# for i in name:
+#     print(i,end=',')
+#     if(i=='z'):
+#         break
+    
+    
+# colors = ['red','black','white','green','pink']
+# for c in colors:
+#   print(c)
+#   for i in c:
+#       print(i)
+
+
+# for k in range(10):
+    # print(k)
+    # print(k+1)
+    # print(k*2)
+    # print(k/2)
+    
+    
+# adj = ["red", "big", "tasty"]
+# fruits = ["apple", "banana", "cherry"]
+
+# for x in adj:
+#   for y in fruits:
+#     print(x, y)    
+    
+    
+# digits = [0, 1, 5]
+
+# for d in digits:
+#     print(d)
+# else:
+#     print("No items left.")   
+
+
+            
+        
