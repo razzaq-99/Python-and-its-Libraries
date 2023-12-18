@@ -271,12 +271,11 @@
 
 # print odd numbers using user input for upper and lower limits.
 
-i = int(input("Enter the lower limit "))
-x = int(input("Enter the upper limit "))
-while(i<x):
-    print(int(i))
-    i=int(i)+2
+# i = int(input("Enter the lower limit "))
+# x = int(input("Enter the upper limit "))
+# while(i<x):
+#     print(int(i))
+#     i=int(i)+2
                      
                      
-                                    
-                     
+                                
