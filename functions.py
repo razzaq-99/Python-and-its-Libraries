@@ -61,8 +61,8 @@
 #         sum = sum + i
 #         print("the avg is ", sum/len(num))
 
-
 # avg(32,34)        
+
 
 
 
@@ -75,6 +75,54 @@
 
 # cal = avg(12,33)   
 # print(cal)
+
+
+
+
+
+# Built-in functions in Python
+
+# integer = -20  
+# print('Absolute value of -20 is:', abs(integer))  
+
+# floating = -20.83  
+# print('Absolute value of -20.83 is:', abs(floating))  
+
+
+
+
+# def calculateAddition(n):  
+#   return n+n  
+# numbers = (1, 3, 4, 9)  
+# result = map(calculateAddition, numbers)  
+# print(result)  
+  
+# # converting map object to set  
+# numbersAddition = set(result)  
+# print(numbersAddition)  
+
+
+
+
+# def filterdata(x):  
+#     if x>5:  
+#         return x  
+ 
+# result = filter(filterdata,(1,2,6,9,77,0))  
+ 
+# print(list(result))  
+
+
+
+
+# small = min(11,33,44,55,66,77,88,99,00)
+# print(small)
+
+
+
+
+# large = max(11,22,33,44,55,66,77,88,99,00)
+# print(large)
 
 
 
