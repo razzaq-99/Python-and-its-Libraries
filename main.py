@@ -213,7 +213,7 @@
 
 
                                  # Loops in Python
-                                 
+                                 # For Loop in Python
 # name = "Razzaq"
 # for i in name:
 #     print(i,end=',')
@@ -252,4 +252,31 @@
 
 
             
-        
+                                 # While loop in Python
+
+# i = 0
+# while(i<10):
+#   print(i)
+#   i=i+1 
+
+# print("Loop Finished")
+
+
+# print even number till 50
+# i = 0
+# while(i<50):
+#     print(i)
+#     i=i+2     
+
+
+# print odd numbers using user input for upper and lower limits.
+
+i = int(input("Enter the lower limit "))
+x = int(input("Enter the upper limit "))
+while(i<x):
+    print(int(i))
+    i=int(i)+2
+                     
+                     
+                                    
+                     
