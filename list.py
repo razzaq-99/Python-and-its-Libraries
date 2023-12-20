@@ -31,10 +31,40 @@ marks = [3,6,9,12,15,18]
 
 
 
-
-
 # Lst = [i*i for i in range(5)]
 # print(Lst)
 
 # Lst = [i+i for i in range(5)]
 # print(Lst)
+
+
+
+
+
+lst1 = [33,11,34,7,55,34,66,99,10,109]
+
+# lst1.sort()
+# print(lst1)
+
+# lst1.reverse()
+# print(lst1)
+
+# print(lst1.index(33))
+# print(lst1.index(34))
+
+# lst1.pop(0)
+# print(lst1)
+
+# lst1.insert(0,00)
+# print(lst1)
+
+lst2 = [1100,9900,3300,0000]
+# lst1.extend(lst2)
+# print(lst1)
+
+# lst2.extend(lst1)
+# print(lst2)
+
+
+lst3 = lst1 + lst2
+print(lst3)
