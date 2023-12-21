@@ -278,4 +278,17 @@
 #     i=int(i)+2
                      
                      
-                                
+                  
+                  
+                  
+                  
+                    #   f-strings in Python
+
+# letter = "My name is {1} and I am from {0}"         
+country="Pak"
+name="Abdul"
+
+# print(letter.format(name,country))                         
+
+
+print(f"My name is {name} and I am from {country}")
