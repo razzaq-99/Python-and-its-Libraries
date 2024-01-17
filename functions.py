@@ -127,3 +127,44 @@
 
 
 
+# def greatest(val1,val2,val3):
+#     if(val1>val2 and val1>val3):
+#         print(val1," is the greatest number")
+#     elif(val2>val1 and val2>val3):
+#         print(val2," is the greatest number")  
+#     else:
+#         print(val3," is the greatest")      
+
+# greatest(12,22,4)
+# print("done")       
+
+
+
+
+# def sqRT():
+#     l=[]
+#     for i in range(1,31):
+#         l.append(i**2)
+    
+#     return l
+
+
+# print(sqRT())    
+
+
+
+
+
+# def add(numbers):
+#     total = 0
+#     for i in numbers:
+#         total += i  # or total = total+1
+       
+#     return(total)    
+
+# print(add([11,22,33]))
+# print(add([66,22,22]))
+
+
+
+
