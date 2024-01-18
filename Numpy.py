@@ -60,7 +60,7 @@ import numpy as np
 
 
 
-arr = np.array([[12,34,55,66],[12,22,44,77]])
+# arr = np.array([[12,34,55,66],[12,22,44,77]])
 
 # print(np.array_split(arr,2))
 # print(np.array_split(arr,3))
@@ -86,3 +86,24 @@ arr = np.array([[12,34,55,66],[12,22,44,77]])
 
 
 
+# arr = np.array([20,40,60,80])
+
+# print(np.sum(arr))
+# print(np.cumsum(arr))                                   # Cumulative Sum
+# print(np.size(arr))
+# print(np.prod(arr))
+
+
+
+price = np.array([20,30,40])
+quantity = np.array([1,2,3])
+
+print(price,"\n",quantity)
+
+print()
+
+mul = np.cumprod([price,quantity],axis=0)                      # Cumulative Product
+print(mul)
+
+print()
+print(np.sum(mul))
