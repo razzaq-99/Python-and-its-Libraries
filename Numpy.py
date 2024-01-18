@@ -60,7 +60,7 @@ import numpy as np
 
 
 
-arr = np.array([12,34,55,66,12,22,44,77])
+arr = np.array([[12,34,55,66],[12,22,44,77]])
 
 # print(np.array_split(arr,2))
 # print(np.array_split(arr,3))
@@ -69,6 +69,20 @@ arr = np.array([12,34,55,66,12,22,44,77])
 # print(np.array_split(arr,8))
 
 
-arr0 = np.array_split(arr,4)
-print(arr0[1])
+# arr0 = np.array_split(arr,4)
+# print(arr0[1])
+
+
+
+# print(np.append(arr,0))                                # (array,value)
+# print(np.append(arr,100))        
+                      
+# print(np.insert(arr,0,100,axis=1))                     # (array,index,value)
+# print(np.insert(arr,0,[100,200],axis=1))                
+
+# print(np.delete(arr,1))                                   # (array,index)
+# print(np.delete(arr,0,axis=1))
+
+
+
 
