@@ -95,15 +95,34 @@ import numpy as np
 
 
 
-price = np.array([20,30,40])
-quantity = np.array([1,2,3])
+# price = np.array([20,30,40])
+# quantity = np.array([1,2,3])
 
-print(price,"\n",quantity)
+# print(price,"\n",quantity)
 
-print()
+# print()
 
-mul = np.cumprod([price,quantity],axis=0)                      # Cumulative Product
-print(mul)
+# mul = np.cumprod([price,quantity],axis=0)                      # Cumulative Product
+# print(mul)
 
-print()
-print(np.sum(mul))
+# print()
+# print(np.sum(mul))
+
+
+
+
+# food_price = np.array([100,200,300,400,500,600,700,800,900])
+
+# print(np.mean(food_price))
+# print(np.median(food_price))
+# print(np.std(food_price))
+
+
+                                     # +1 is direct proportional relation
+                                     # -1 is inversely proportional relation
+                                     # 0 shows no relation
+                                     
+tabacco = np.array([10,30,50,40])
+deaths = np.array([200,120,400,330])
+
+print(np.corrcoef(tabacco,deaths))       
