@@ -122,7 +122,69 @@ import numpy as np
                                      # -1 is inversely proportional relation
                                      # 0 shows no relation
                                      
-tabacco = np.array([10,30,50,40])
-deaths = np.array([200,120,400,330])
+# tabacco = np.array([10,30,50,40])
+# deaths = np.array([200,120,400,330])
 
-print(np.corrcoef(tabacco,deaths))       
+# print(np.corrcoef(tabacco,deaths))       
+
+
+
+
+                                             # Convert the array into a 1D array:
+
+
+
+# arr = np.array([[1, 2, 3], [4, 5, 6],[7,8,9]])
+
+# newarr = arr.reshape(-1)                       # Flattening = multi_D arrays into 1D array 
+
+# print(arr)
+
+# print("")
+# print(newarr)
+
+
+
+# arr = np.array([1,2,3,4,5,6,7,8,9])
+# x = np.where(arr%2==0)
+# print(x)
+
+
+                                         # Filtering of Array
+# arr = np.array([12,34,56,13,44])
+
+# x = [True,False,False,False,True]
+
+# newarr = arr[x]
+
+# print(newarr)
+
+
+
+# arr = np.array([1,2,3,4,5])
+
+# x = [True,False,True,False,True]
+
+# newarr = arr[x]
+
+# print(newarr)
+
+
+
+
+
+# Create a filter array that will return only values higher than 42:
+
+arr = np.array([41, 42, 43, 44,45,00])
+filter_arr = []
+
+for element in arr:
+  if element > 42:
+    filter_arr.append(True)
+  else:
+    filter_arr.append(False)
+
+newarr = arr[filter_arr]
+
+# print(filter_arr)
+print(newarr)
