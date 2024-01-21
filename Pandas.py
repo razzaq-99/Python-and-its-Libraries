@@ -124,7 +124,88 @@ data = pd.read_excel("ESD.xlsx")
 # print(data)
 
 
+# data["New Bonus"] = (data["Annual Salary"]/100)*20
 
+# print(data.head(10))
+
+
+# x = {"Months":["November","October","August","December"]}
+
+# df = pd.DataFrame(x)
+# # print(df)
+
+ 
+# def extract(value):
+#     return value[0:3] 
+
+
+# df["    months_shortcut"] = df["Months"].map(extract)
+
+# print(df)
+
+
+
+x = {"Date":["12-12-2001","23-10-2010","04-03-2004","16-06-2003","21-08-2015"]}
+
+df = pd.DataFrame(x)
+
+# print(df)
+
+def extract(value):
+    return value[0:2]
+
+df["  Day"] = df["Date"].map(extract)
+
+
+def extract(value):
+    return value[3:5]
+
+df["  Month"] = df["Date"].map(extract)
+
+
+def extract(value):
+    return value[6:]
+
+df["  Year"] = df["Date"].map(extract)
+
+
+
+print(df)
+
+
+
+
+
+
+
+
+# x = {"Full Date":["12-12-2001","23-10-2010","04-03-2004","16-06-2003","21-08-2015"]}
+
+# df = pd.DataFrame(x)
+
+# print(df)
+
+# def extract(value,start,end):
+#     return value[start,end]
+
+# df["  Day"] = df["Full Date"].map(lambda x: extract[0,2])
+# df["  Month"] = df["Full Date"].map(lambda x: extract[3,5])
+# df["  Year"] = df["Full Date"].map(lambda x: extract[6,10])
+
+# def extract(value):
+#     return value[3:5]
+
+# df["  Month"] = df["Full Date"].map(extract)
+
+
+# def extract(value):
+#     return value[6:]
+
+# df["  Year"] = df["Full Date"].map(extract)
+
+
+
+# print(df)
 
 
 
