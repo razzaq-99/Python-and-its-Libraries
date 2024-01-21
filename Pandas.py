@@ -71,7 +71,7 @@ import pandas as pd
 
 
 
-data = pd.read_csv("hotel_bookings.csv")
+# data = pd.read_csv("hotel_bookings.csv")
 
 # print(data.head(10))
 # data = data["company"].dropna()
@@ -84,15 +84,44 @@ data = pd.read_csv("hotel_bookings.csv")
 # print(data["children"].tail(10))
 
 
-x = (data.fillna("30000000000"))
-print(x)
-print(x.isnull().sum())
+# x = (data.fillna("30000000000"))
+# print(x)
+# print(x.isnull().sum())
 
 # print(data["company"].fillna("HR").head(5))       # replace first 5 null vales with HR
 
 
 
 
+
+
+
+
+                                             # Column Transformations/ making new column from existing columns
+
+import pandas as pd 
+data = pd.read_excel("ESD.xlsx")
+# print(data)
+
+
+# data.loc[(data["Bonus %"] == 0), "GetBonus"] = "no bonus"
+# data.loc[(data["Bonus %"] > 0), "GetBonus"] = "bonus"
+
+# print(data.head(10))
+
+
+
+# data.loc[(data["Country"] == "China"), "Budget"] = "50 %"
+# data.loc[(data["Country"] == "United States"), "Budget"] = "HIGH"
+
+# print(data.head(10))
+# print(data.tail(10))
+
+
+       # making one column from two existing columns
+# data["Location"] = data["City"] +", "+ data["Country"]
+
+# print(data)
 
 
 
