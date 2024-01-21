@@ -43,6 +43,6 @@ data = pd.read_csv("Hotel Reservations.csv")
 # print(x.duplicated().head(5))
 # print(x.duplicated().sum())
 
-
+print(data.duplicated().head(5))
 
 
