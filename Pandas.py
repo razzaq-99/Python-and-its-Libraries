@@ -289,17 +289,18 @@
  
                                      # Merge , Join and Concatenate in Pandas
                                      
-import pandas as pd 
-data1 = {"EmpID":["E1","E2","E3","E4","E5"],
-       "Names":["Ali","Ahmed","Razzaq","Umair","Iqra"],
-       "Age":[23,21,19,43,77]
-       }
+# import pandas as pd 
 
-data2 = {"EmpID":["E1","E2","E6","E8","E5"],
-       "salary":[23000,45000,33400,12000,10000]}
+# data1 = {"EmpID":["E1","E2","E3","E4","E5"],
+#        "Names":["Ali","Ahmed","Razzaq","Umair","Iqra"],
+#        "Age":[23,21,19,43,77]
+#        }
 
-df1 = pd.DataFrame(data1)
-df2 = pd.DataFrame(data2)
+# data2 = {"EmpID":["E1","E2","E6","E8","E5"],
+#        "salary":[23000,45000,33400,12000,10000]}
+
+# df1 = pd.DataFrame(data1)
+# df2 = pd.DataFrame(data2)
 
 
 # print(df1)
@@ -316,4 +317,40 @@ df2 = pd.DataFrame(data2)
 # print(pd.merge(df1,df2,how="outer"))
 
 
-print(pd.concat([df1,df2]))
+# print(pd.concat([df1,df2]))
+
+
+
+
+
+                            
+                            
+                                      # Compare DataFrames
+                                      
+import pandas as pd
+data = {"Fruits":["mango","Apple","Banana","Lemon"],
+        "Price":[120,140,100,200],
+        "Quantity":[10,8,15,50]}
+
+df1 = pd.DataFrame(data)
+print(df1)
+
+
+
+df2 = df1.copy()
+df2.loc[0,"Price"] = 500
+df2.loc[1,"Price"] = 200
+df2.loc[2,"Price"] = 150
+df2.loc[3,"Price"] = 250
+
+print()
+
+df2.loc[0,"Quantity"] = 15
+df2.loc[1,"Quantity"] = 13
+df2.loc[2,"Quantity"] = 20
+df2.loc[3,"Quantity"] = 80
+
+# print(df2)
+
+print(df1.compare(df2))                                              # It compare exact changes occurance
+print(df1.compare(df2,keep_shape=True))
