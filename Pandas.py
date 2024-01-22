@@ -1,4 +1,4 @@
-import pandas as pd
+# import pandas as pd
 
 # data = { "Name":['Razzaq','Ali','Ahmed'],
 #          "Age":[20,21,22],
@@ -221,8 +221,8 @@ import pandas as pd
 
                                                     # Group By in Pandas
 
-import pandas as pd
-data = pd.read_excel("ESD.xlsx")
+# import pandas as pd
+# data = pd.read_excel("ESD.xlsx")
 
 # print(data.head(10))
 
@@ -278,3 +278,42 @@ data = pd.read_excel("ESD.xlsx")
 # print(gp)
 
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                     # Merge , Join and Concatenate in Pandas
+                                     
+import pandas as pd 
+data1 = {"EmpID":["E1","E2","E3","E4","E5"],
+       "Names":["Ali","Ahmed","Razzaq","Umair","Iqra"],
+       "Age":[23,21,19,43,77]
+       }
+
+data2 = {"EmpID":["E1","E2","E6","E8","E5"],
+       "salary":[23000,45000,33400,12000,10000]}
+
+df1 = pd.DataFrame(data1)
+df2 = pd.DataFrame(data2)
+
+
+# print(df1)
+# print(df2)
+
+# print(pd.merge(df1,df2, on = "EmpID"))        # merging two dataset based on one Common Column (EmpID).
+
+
+
+# print(pd.merge(df1,df2,how="right"))
+# print(pd.merge(df1,df2,how="cross"))
+# print(pd.merge(df1,df2,how="inner"))
+# print(pd.merge(df1,df2,how="left"))
+# print(pd.merge(df1,df2,how="outer"))
+
+
+print(pd.concat([df1,df2]))
