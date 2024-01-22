@@ -1,4 +1,4 @@
-# import pandas as pd
+import pandas as pd
 
 # data = { "Name":['Razzaq','Ali','Ahmed'],
 #          "Age":[20,21,22],
@@ -327,30 +327,75 @@
                             
                                       # Compare DataFrames
                                       
-import pandas as pd
-data = {"Fruits":["mango","Apple","Banana","Lemon"],
-        "Price":[120,140,100,200],
-        "Quantity":[10,8,15,50]}
+# import pandas as pd
+# data = {"Fruits":["mango","Apple","Banana","Lemon"],
+#         "Price":[120,140,100,200],
+#         "Quantity":[10,8,15,50]}
 
-df1 = pd.DataFrame(data)
-print(df1)
+# df1 = pd.DataFrame(data)
+# print(df1)
 
 
 
-df2 = df1.copy()
-df2.loc[0,"Price"] = 500
-df2.loc[1,"Price"] = 200
-df2.loc[2,"Price"] = 150
-df2.loc[3,"Price"] = 250
+# df2 = df1.copy()
+# df2.loc[0,"Price"] = 500
+# df2.loc[1,"Price"] = 200
+# df2.loc[2,"Price"] = 150
+# df2.loc[3,"Price"] = 250
 
-print()
+# print()
 
-df2.loc[0,"Quantity"] = 15
-df2.loc[1,"Quantity"] = 13
-df2.loc[2,"Quantity"] = 20
-df2.loc[3,"Quantity"] = 80
+# df2.loc[0,"Quantity"] = 15
+# df2.loc[1,"Quantity"] = 13
+# df2.loc[2,"Quantity"] = 20
+# df2.loc[3,"Quantity"] = 80
 
 # print(df2)
 
-print(df1.compare(df2))                                              # It compare exact changes occurance
-print(df1.compare(df2,keep_shape=True))
+# print(df1.compare(df2))                                            # It compare exact changes occurance
+# print(df1.compare(df2,keep_shape=True))
+
+
+
+
+
+
+
+                                                      # Pivoting , Melting in Pandas 
+     
+# dict = {"keys":["key1","key2","key1","key2"],
+#         "Names":["Jone","Micheal","David","Josh"],
+#         "Houses":["Black","Red","Blue","Black"],
+#         "Grades":["A+","A","B+","C"]}
+
+
+# df = pd.DataFrame(dict)
+
+# print(df)
+
+# print()
+
+# print(df.pivot(index="keys",columns="Names",values="Houses"))
+# print(df.pivot(index="keys",columns="Names",values=["Houses","Grades"]))
+
+
+
+
+
+
+
+dict = {"Names":["Jone","Micheal","David","Josh"],
+        "Houses":["Black","Red","Blue","Black"],
+        "Grades":["A+","A","B+","C"]}
+
+df = pd.DataFrame(dict)
+
+print(df)
+
+print()
+
+print(pd.melt(df,id_vars=["Names"],value_vars=["Grades"]))
+
+print()
+
+print(pd.melt(df,id_vars=["Names"],value_vars=["Houses"]))
