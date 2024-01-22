@@ -99,8 +99,8 @@ import pandas as pd
 
                                              # Column Transformations/ making new column from existing columns
 
-import pandas as pd 
-data = pd.read_excel("ESD.xlsx")
+# import pandas as pd 
+# data = pd.read_excel("ESD.xlsx")
 # print(data)
 
 
@@ -145,32 +145,35 @@ data = pd.read_excel("ESD.xlsx")
 
 
 
-x = {"Date":["12-12-2001","23-10-2010","04-03-2004","16-06-2003","21-08-2015"]}
 
-df = pd.DataFrame(x)
+
+
+# x = {"Date":["12-12-2001","23-10-2010","04-03-2004","16-06-2003","21-08-2015"]}
+
+# df = pd.DataFrame(x)
 
 # print(df)
 
-def extract(value):
-    return value[0:2]
+# def extract(value):
+#     return value[0:2]
 
-df["  Day"] = df["Date"].map(extract)
-
-
-def extract(value):
-    return value[3:5]
-
-df["  Month"] = df["Date"].map(extract)
+# df["  Day"] = df["Date"].map(extract)
 
 
-def extract(value):
-    return value[6:]
+# def extract(value):
+#     return value[3:5]
 
-df["  Year"] = df["Date"].map(extract)
+# df["  Month"] = df["Date"].map(extract)
+
+
+# def extract(value):
+#     return value[6:]
+
+# df["  Year"] = df["Date"].map(extract)
 
 
 
-print(df)
+# print(df)
 
 
 
@@ -208,5 +211,70 @@ print(df)
 # print(df)
 
 
+
+
+
+
+
+
+
+
+                                                    # Group By in Pandas
+
+import pandas as pd
+data = pd.read_excel("ESD.xlsx")
+
+# print(data.head(10))
+
+
+# gp = data.groupby("Department").agg({"Gender":"count"})
+# print(gp)
+
+
+# gp = data.groupby("Job Title").agg({"Gender":"count"})
+# print(gp)
+
+
+# gp = data.groupby("Country").agg({"City":"count"})
+# print(gp)
+
+
+# gp = data.groupby(["Department","Gender"]).agg({"EEID":"count"})
+# print(gp)
+
+
+# gp = data.groupby("Country").agg({"Age":"mean"})
+# print(gp)
+
+
+# gp = data.groupby("Country").agg({"Age":"sum"})
+# print(gp)
+
+# gp = data.groupby("Country").agg({"Annual Salary":"sum"})
+# print(gp)
+
+# gp = data.groupby("Country").agg({"Annual Salary":"count"})
+# print(gp)
+
+
+# gp = data.groupby("Country").agg({"Annual Salary":"max"})
+# print(gp)
+
+
+# gp = data.groupby("Country").agg({"Annual Salary":"min"})
+# print(gp)
+
+
+# gp = data.groupby("Country").agg({"Bonus %":"max"})
+# print(gp)
+
+
+# gp = data.groupby("Department").agg({"Annual Salary":"count"})
+# print(gp)
+
+
+
+# gp = data.groupby(["Country","City","Gender"]).agg({"Annual Salary":"max","Age":"max"})
+# print(gp)
 
 
