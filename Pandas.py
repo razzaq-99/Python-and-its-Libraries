@@ -16,7 +16,7 @@ import pandas as pd
 # data = pd.read_csv("Hotel Reservations.csv")
 
 
-# print(data)
+# print(data.to_string())
 # print(data.head(10))
 # print(data.tail(10))
 # print(data.info())
@@ -70,9 +70,9 @@ import pandas as pd
 
 
 
-
+# import pandas as pd
 # data = pd.read_csv("hotel_bookings.csv")
-
+# print(data.to_string())
 # print(data.head(10))
 # data = data["company"].dropna()
 # print(data.isnull().sum())
@@ -384,18 +384,41 @@ import pandas as pd
 
 
 
-dict = {"Names":["Jone","Micheal","David","Josh"],
-        "Houses":["Black","Red","Blue","Black"],
-        "Grades":["A+","A","B+","C"]}
+# dict = {"Names":["Jone","Micheal","David","Josh"],
+#         "Houses":["Black","Red","Blue","Black"],
+#         "Grades":["A+","A","B+","C"]}
 
-df = pd.DataFrame(dict)
+# df = pd.DataFrame(dict)
 
+# print(df)
+
+# print()
+
+# print(pd.melt(df,id_vars=["Names"],value_vars=["Grades"]))
+
+# print()
+
+# print(pd.melt(df,id_vars=["Names"],value_vars=["Houses"]))
+
+
+
+
+# import pandas as pd
+# print(pd.options.display.max_rows)                              # display number of rows to be shown
+
+
+# pd.options.display.max_rows = 9999                              # Increase the maximum number of rows to display the entire DataFrame:
+# print(pd.options.display.max_rows)           
+
+
+                                                       # IF the data is very large and you want to remove wrong added value
+
+import pandas as pd
+x = {"Name":["Ali","Ahmed","Raza"],"Age":[18,38,128]}
+df = pd.DataFrame(x)
 print(df)
-
-print()
-
-print(pd.melt(df,id_vars=["Names"],value_vars=["Grades"]))
-
-print()
-
-print(pd.melt(df,id_vars=["Names"],value_vars=["Houses"]))
+for y in df.index:
+  if df.loc[y, "Age"] > 120:
+    df.drop(y, inplace = True)
+    
+print(df)    
