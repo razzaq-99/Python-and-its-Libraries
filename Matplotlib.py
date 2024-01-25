@@ -116,7 +116,7 @@
 
 
 
-                                           # SCATTER PLOT
+                                                                   # SCATTER PLOT
 # import matplotlib.pyplot as plt
 # import numpy as np
 # import Pandas as pd
@@ -137,14 +137,14 @@
 
 # Plotting from DataSet
 
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
+# import matplotlib.pyplot as plt
+# import numpy as np
+# import pandas as pd
 
 
-data = pd.read_excel("ESD.xlsx")
+# data = pd.read_excel("ESD.xlsx")
 
-df = pd.DataFrame(data)
+# df = pd.DataFrame(data)
 # print(df.to_string)
 # color = np.random.randint(low=None,high=None)
 
@@ -159,5 +159,26 @@ df = pd.DataFrame(data)
   
   
 # plt.scatter(df["Annual Salary"],df["Gender"])
-plt.scatter(df["Country"],df["Annual Salary"])
+# plt.scatter(df["Country"],df["Annual Salary"])
+# plt.show()
+
+
+
+
+
+
+
+                                                   
+                                                         # PIE CHART 
+import matplotlib.pyplot as plt
+
+
+brands = ["Oneplus","Apple","Oppo","Vivo","Infinix"]
+price = [60000,120000,30000,25000]
+popularity = [25,75,35,30,50]       
+colors = ["Green","Silver","orange","red","blue"]
+ex = [0,0,0,0.09,0]
+
+
+plt.pie(popularity,labels=brands,colors=colors,explode=ex,autopct="%.2f",startangle=90)
 plt.show()
