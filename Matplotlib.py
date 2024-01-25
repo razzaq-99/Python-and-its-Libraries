@@ -217,15 +217,32 @@
 
                               # BOX PLOT
 import matplotlib.pyplot as plt        
-
-data = [12,44,23,66,34,88,62,99,12,45,1,10,99]
-x = [33,12,44,53,24,55,9,1,4,6,7]
+import pandas as pd
+# data = [12,44,23,66,34,88,62,99,12,45,1,10,99]
+# x = [33,12,44,53,24,55,9,1,4,6,7]
 
 # plt.boxplot(data)
 # plt.boxplot(x)
 
-plt_values = [data,x]
+# plt_values = [data,x]
+# plt.boxplot(plt_values)
+# plt.xlabel("plots")
+# plt.ylabel("Data")
+# plt.show()
+
+
+
+
+
+# plotting from dataset
+
+data = pd.read_excel("ESD.xlsx")
+df = pd.DataFrame(data)
+print(df.head(10))
+plt_values = [df["Annual Salary"],df["Bonus %"]]
+
+# plt.boxplot(df["Annual Salary"])
 plt.boxplot(plt_values)
-plt.xlabel("plots")
-plt.ylabel("Data")
+
+plt.title("Annual Salary of Emplyees")
 plt.show()
