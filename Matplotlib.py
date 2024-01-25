@@ -79,34 +79,52 @@
 # plt.show()
 
 
-import pandas as pd
-import matplotlib.pyplot as plt
+# import pandas as pd
+# import matplotlib.pyplot as plt
 
-data = pd.read_excel("expense3.xlsx")
-df = pd.DataFrame(data)
-print(df)
+# data = pd.read_excel("expense3.xlsx")
+# df = pd.DataFrame(data)
+# print(df)
 
 
 # df["Payment Mode"] = df["Payment Mode"].astype(str)
 # df["Amount"] = df["Amount"].astype(str)
-df["Category"] = df["Category"].astype(str)
-df["Payment Mode"] = df["Payment Mode"].astype(str)
-df["Date"] = df["Date"].astype(str)
-
-dfx1 = df.groupby("Category")["Amount"].sum()
-dfx2 = df.groupby("Payment Mode")["Amount"].sum()
-dfx3 = df.groupby("Date")["Amount"].sum()
+# df["Category"] = df["Category"].astype(str)
+# df["Payment Mode"] = df["Payment Mode"].astype(str)
+# df["Date"] = df["Date"].astype(str)
 
 
-print(dfx1)
-print(dfx2)
-print(dfx3)
+# dfx1 = df.groupby("Category")["Amount"].sum()
+# dfx2 = df.groupby("Payment Mode")["Amount"].sum()
+# dfx3 = df.groupby("Date")["Amount"].sum()
+
+
+# print(dfx1)
+# print(dfx2)
+# print(dfx3)
 
 
 # plt.plot(df["Category"],df["Amount"])
-plt.plot(dfx1.index,dfx1.values,marker="^",label ="Annual bills")
-plt.plot(dfx2.index,dfx2.values,marker = "^",label="Payment Methods",color = "red")
+# plt.plot(dfx1.index,dfx1.values,marker="^",label ="Annual bills")
+# plt.plot(dfx2.index,dfx2.values,marker = "^",label="Payment Methods",color = "red")
 # plt.plot(dfx3.index,dfx3.values,marker="^",label="Every date amount",color="green")
 
-plt.legend()
+# plt.legend()
+# plt.show()
+
+
+
+
+
+                                           # SCATTER PLOT
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.randint(1,100,70)
+y = np.random.randint(10,100,70)
+colors = np.random.randint(10,100,70)
+
+# plt.scatter(x,y,marker="*",cmap="rainbow",c = colors,)
+plt.scatter(x,y,marker="*",cmap="twilight",c = colors,)
+plt.colorbar()
 plt.show()
