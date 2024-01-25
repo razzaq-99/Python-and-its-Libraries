@@ -63,17 +63,50 @@
 
                                                                # LINE PLOT
                                                                
+# import matplotlib.pyplot as plt
+# x = ["day1","day2","day3","day4","day5","day6"]
+# y = [100,400,120,330,20,200]
+# z = [200,500,40,250,0,400]
+# z1 = [400,600,350,100,50,30]
+
+
+# # plt.plot(x,y)
+# # plt.plot(x,y,marker="*")
+# plt.plot(x,y,marker = "^",ls ="--",color="red",label="week1")
+# plt.plot(x,z,marker = "^",ls ="--",color="blue",label="week2")
+# plt.plot(x,z1,marker = "^",ls ="-",color="green",label="week3")
+# plt.legend()
+# plt.show()
+
+
+import pandas as pd
 import matplotlib.pyplot as plt
-x = ["day1","day2","day3","day4","day5","day6"]
-y = [100,400,120,330,20,200]
-z = [200,500,40,250,0,400]
-z1 = [400,600,350,100,50,30]
+
+data = pd.read_excel("expense3.xlsx")
+df = pd.DataFrame(data)
+print(df)
 
 
-# plt.plot(x,y)
-# plt.plot(x,y,marker="*")
-plt.plot(x,y,marker = "^",ls ="--",color="red",label="week1")
-plt.plot(x,z,marker = "^",ls ="--",color="blue",label="week2")
-plt.plot(x,z1,marker = "^",ls ="-",color="green",label="week3")
+# df["Payment Mode"] = df["Payment Mode"].astype(str)
+# df["Amount"] = df["Amount"].astype(str)
+df["Category"] = df["Category"].astype(str)
+df["Payment Mode"] = df["Payment Mode"].astype(str)
+df["Date"] = df["Date"].astype(str)
+
+dfx1 = df.groupby("Category")["Amount"].sum()
+dfx2 = df.groupby("Payment Mode")["Amount"].sum()
+dfx3 = df.groupby("Date")["Amount"].sum()
+
+
+print(dfx1)
+print(dfx2)
+print(dfx3)
+
+
+# plt.plot(df["Category"],df["Amount"])
+plt.plot(dfx1.index,dfx1.values,marker="^",label ="Annual bills")
+plt.plot(dfx2.index,dfx2.values,marker = "^",label="Payment Methods",color = "red")
+# plt.plot(dfx3.index,dfx3.values,marker="^",label="Every date amount",color="green")
+
 plt.legend()
 plt.show()
