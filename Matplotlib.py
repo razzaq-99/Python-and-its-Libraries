@@ -117,14 +117,47 @@
 
 
                                            # SCATTER PLOT
-import matplotlib.pyplot as plt
-import numpy as np
+# import matplotlib.pyplot as plt
+# import numpy as np
+# import Pandas as pd
 
-x = np.random.randint(1,100,70)
-y = np.random.randint(10,100,70)
-colors = np.random.randint(10,100,70)
+
+# x = np.random.randint(1,100,70)
+# y = np.random.randint(10,100,70)
+# colors = np.random.randint(10,100,70)
 
 # plt.scatter(x,y,marker="*",cmap="rainbow",c = colors,)
-plt.scatter(x,y,marker="*",cmap="twilight",c = colors,)
-plt.colorbar()
+# plt.scatter(x,y,marker="*",cmap="twilight",c = colors,)
+# plt.colorbar()
+# plt.show()
+
+
+
+
+
+# Plotting from DataSet
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+
+data = pd.read_excel("ESD.xlsx")
+
+df = pd.DataFrame(data)
+# print(df.to_string)
+# color = np.random.randint(low=None,high=None)
+
+# plt.scatter(df["Age"],df["Bonus %"])
+# plt.title("Age wise Employees Bonus")
+# plt.xlabel("Age")
+# plt.ylabel("Bonus %")
+# plt.show()
+# print(df.to_string)
+
+  
+  
+  
+# plt.scatter(df["Annual Salary"],df["Gender"])
+plt.scatter(df["Country"],df["Annual Salary"])
 plt.show()
