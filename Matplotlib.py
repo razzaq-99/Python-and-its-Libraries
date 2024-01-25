@@ -170,15 +170,41 @@
 
                                                    
                                                          # PIE CHART 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
-brands = ["Oneplus","Apple","Oppo","Vivo","Infinix"]
-price = [60000,120000,30000,25000]
-popularity = [25,75,35,30,50]       
-colors = ["Green","Silver","orange","red","blue"]
-ex = [0,0,0,0.09,0]
+# brands = ["Oneplus","Apple","Oppo","Vivo","Infinix"]
+# price = [60000,120000,30000,25000]
+# popularity = [25,75,35,30,50]       
+# colors = ["Green","Silver","orange","red","blue"]
+# ex = [0,0,0,0.09,0]
 
 
-plt.pie(popularity,labels=brands,colors=colors,explode=ex,autopct="%.2f",startangle=90)
+# plt.pie(popularity,labels=brands,colors=colors,explode=ex,autopct="%.2f",startangle=90)
+# plt.show()
+
+
+
+
+# chart from DataSet
+
+
+import matplotlib.pyplot as plt 
+import pandas as pd 
+
+data = pd.read_excel("expense3.xlsx")
+
+df = pd.DataFrame(data)
+
+df["Payment Mode"] = df["Payment Mode"].astype(str)
+dfx = df.groupby("Payment Mode")["Amount"].sum()
+ex = [0,0.1,0,0]
+
+
+# plt.pie(df["Amount"],labels=df["Category"],autopct="%.2f")
+plt.pie(dfx.values,labels=dfx.index,autopct="%.2f",explode=ex,startangle=90)
+
+plt.pie()
+
 plt.show()
+# print(df)
