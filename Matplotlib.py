@@ -189,22 +189,43 @@
 # chart from DataSet
 
 
-import matplotlib.pyplot as plt 
-import pandas as pd 
+# import matplotlib.pyplot as plt 
+# import pandas as pd 
 
-data = pd.read_excel("expense3.xlsx")
+# data = pd.read_excel("expense3.xlsx")
 
-df = pd.DataFrame(data)
+# df = pd.DataFrame(data)
 
-df["Payment Mode"] = df["Payment Mode"].astype(str)
-dfx = df.groupby("Payment Mode")["Amount"].sum()
-ex = [0,0.1,0,0]
+# df["Payment Mode"] = df["Payment Mode"].astype(str)
+# dfx = df.groupby("Payment Mode")["Amount"].sum()
+# ex = [0,0.1,0,0]
 
 
 # plt.pie(df["Amount"],labels=df["Category"],autopct="%.2f")
-plt.pie(dfx.values,labels=dfx.index,autopct="%.2f",explode=ex,startangle=90)
+# plt.pie(dfx.values,labels=dfx.index,autopct="%.2f",explode=ex,startangle=90)
 
-plt.pie()
+# plt.pie()
 
-plt.show()
+# plt.show()
 # print(df)
+
+
+
+
+
+
+
+                              # BOX PLOT
+import matplotlib.pyplot as plt        
+
+data = [12,44,23,66,34,88,62,99,12,45,1,10,99]
+x = [33,12,44,53,24,55,9,1,4,6,7]
+
+# plt.boxplot(data)
+# plt.boxplot(x)
+
+plt_values = [data,x]
+plt.boxplot(plt_values)
+plt.xlabel("plots")
+plt.ylabel("Data")
+plt.show()
