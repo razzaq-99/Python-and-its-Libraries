@@ -236,13 +236,48 @@ import pandas as pd
 
 # plotting from dataset
 
-data = pd.read_excel("ESD.xlsx")
-df = pd.DataFrame(data)
-print(df.head(10))
-plt_values = [df["Annual Salary"],df["Bonus %"]]
+# data = pd.read_excel("ESD.xlsx")
+# df = pd.DataFrame(data)
+# print(df.head(10))
+# plt_values = [df["Annual Salary"],df["Bonus %"]]
 
 # plt.boxplot(df["Annual Salary"])
-plt.boxplot(plt_values)
+# plt.boxplot(plt_values)
 
-plt.title("Annual Salary of Emplyees")
+# plt.title("Annual Salary of Emplyees")
+# plt.show()
+
+
+
+
+
+
+
+
+
+
+
+                                           # Histogram
+import matplotlib.pyplot as plt
+
+data1 = [23,31,55,63,8,23,33,81,4,26,34,5,2]
+data2 = [120,140,160,180]
+data3 = [92,94,99,110]
+
+# plt.hist(data,bins=50)
+# plt.hist(data1,bins=len(data1),edgecolor="black",color="orange")
+# plt.hist(data2,bins=len(data2),edgecolor="black",color="orange")
+
+# plt.hist(data,bins='auto',edgecolor="black",color="orange")
+
+plt.hist([data1,data2,data3],bins='auto')
+plt.xlabel('Value',fontsize=15)
+plt.ylabel('Frequency',fontsize=15)
+
+# plt.xticks(fontsize=15)
+# plt.yticks(fontsize=15)
+
+
 plt.show()
+
+                                                         
