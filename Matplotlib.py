@@ -258,11 +258,11 @@ import pandas as pd
 
 
                                            # Histogram
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-data1 = [23,31,55,63,8,23,33,81,4,26,34,5,2]
-data2 = [120,140,160,180]
-data3 = [92,94,99,110]
+# data1 = [23,31,55,63,8,23,33,81,4,26,34,5,2]
+# data2 = [120,140,160,180]
+# data3 = [92,94,99,110]
 
 # plt.hist(data,bins=50)
 # plt.hist(data1,bins=len(data1),edgecolor="black",color="orange")
@@ -270,14 +270,31 @@ data3 = [92,94,99,110]
 
 # plt.hist(data,bins='auto',edgecolor="black",color="orange")
 
-plt.hist([data1,data2,data3],bins='auto')
-plt.xlabel('Value',fontsize=15)
-plt.ylabel('Frequency',fontsize=15)
+# plt.hist([data1,data2,data3],bins='auto')
+# plt.xlabel('Value',fontsize=15)
+# plt.ylabel('Frequency',fontsize=15)
 
 # plt.xticks(fontsize=15)
 # plt.yticks(fontsize=15)
 
 
-plt.show()
+# plt.show()
 
                                                          
+                                                         
+                                                         
+                                                         
+                                                        # Plotting data from DataSet
+import matplotlib.pyplot as plt 
+import pandas as pd         
+
+data = pd.read_excel("ESD.xlsx")
+df = pd.DataFrame(data) 
+
+# dfx = df.groupby("Gender")["Annual Salary"].sum()
+
+# plt.hist(df["Annual Salary"],bins='auto')    
+
+plt.hist(df["Bonus %"],bins='auto',edgecolor="black",align='mid',color="orange")                
+
+plt.show()                          
