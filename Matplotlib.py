@@ -353,8 +353,8 @@ import pandas as pd
                                               
                                               
                                                  # STEM PLOT 
-import matplotlib.pyplot as plt 
-import pandas as pd 
+# import matplotlib.pyplot as plt 
+# import pandas as pd 
 
 # data = [20,30,40,50,60,70,80,90,99,90,80,70,60,50,40,30,20] 
 
@@ -390,8 +390,8 @@ import pandas as pd
 
                                                  
                                                 # STACK PLOT 
-import matplotlib.pyplot as plt 
-import pandas as pd 
+# import matplotlib.pyplot as plt 
+# import pandas as pd 
 
 # week = [1,2,3,4,5,6,7,8,9]      
 # persons = [10,20,30,40,50,10,20,30,40] 
@@ -411,13 +411,62 @@ import pandas as pd
 
  # Plotting from Food Dataset
  
-data = pd.read_csv("food_data.csv")   
-df = pd.DataFrame(data)
+# data = pd.read_csv("food_data.csv")   
+# df = pd.DataFrame(data)
 
-print(df.head(10))
+# print(df.head(10))
 
 # dfx = df.groupby(["Category"])["Protein","Fat"].mean()
 # plt.stackplot(df["Category"].unique(),dfx["Protein"],dfx["Fat"])
 
-plt.stackplot(df["Protein"],df["Fat"],df["Calories"],colors=["red","green","blue"])
+# plt.stackplot(df["Protein"],df["Fat"],df["Calories"],colors=["red","green","blue"])
+# plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+                                    # STEP PLOT 
+                                    
+import matplotlib.pyplot as plt
+import pandas as pd 
+
+# x = ["day1","day2","day3","day4","day5","day6","day7"]
+# y = [20,30,50,25,15,40,60]
+
+# plt.step(x,y,where="post")
+# plt.step(x,y,where="mid",marker="o",label="Step Mid")
+# plt.legend()
+
+# plt.show()
+
+
+
+
+
+
+# DataSet 
+
+data = pd.read_excel("expense3.xlsx")
+
+df = pd.DataFrame(data)
+
+print(df.head(10))
+
+
+df["Category"] = df["Category"].astype(str)
+df["Payment Mode"] = df["Payment Mode"].astype(str)
+
+dfx = df.groupby("Category").agg({"Amount":"sum"})
+
+
+plt.step(dfx.index,dfx["Amount"],marker="o",where="mid")
+
 plt.show()
