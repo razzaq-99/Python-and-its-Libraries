@@ -372,15 +372,52 @@ import pandas as pd
 
 # plotting DataSet
 
-data = pd.read_excel("ESD.xlsx")
+# data = pd.read_excel("ESD.xlsx")
 
-df = pd.DataFrame(data) 
+# df = pd.DataFrame(data) 
 
-df2 = df.head(50)
+# df2 = df.head(50)
 
 # plt.stem(df2["Age"],bottom=10)  
-plt.stem(df2["Annual Salary"]) 
-plt.title("Annual Salary of Employees",fontsize=20)
-plt.xlabel("No: of Employees",fontsize=15)
-plt.ylabel("Annual Salary",fontsize=15)
-plt.show()                                
+# plt.stem(df2["Annual Salary"]) 
+# plt.title("Annual Salary of Employees",fontsize=20)
+# plt.xlabel("No: of Employees",fontsize=15)
+# plt.ylabel("Annual Salary",fontsize=15)
+# plt.show()                                
+
+
+
+
+                                                 
+                                                # STACK PLOT 
+import matplotlib.pyplot as plt 
+import pandas as pd 
+
+# week = [1,2,3,4,5,6,7,8,9]      
+# persons = [10,20,30,40,50,10,20,30,40] 
+# age = [15,25,35,45,55,15,25,35,45]
+# salary = [34,40,35,30,50,45,34,45,50]
+# colors = ["blue","orange","red"]
+
+# plt.stackplot(week,persons,age,baseline="sym")
+
+# plt.stackplot(week,persons,age,salary,colors=colors,labels=["Persons","Age","Salary"])
+# plt.legend()
+# plt.show()
+                                         
+                           
+                                         
+                                         
+
+ # Plotting from Food Dataset
+ 
+data = pd.read_csv("food_data.csv")   
+df = pd.DataFrame(data)
+
+print(df.head(10))
+
+# dfx = df.groupby(["Category"])["Protein","Fat"].mean()
+# plt.stackplot(df["Category"].unique(),dfx["Protein"],dfx["Fat"])
+
+plt.stackplot(df["Protein"],df["Fat"],df["Calories"],colors=["red","green","blue"])
+plt.show()
