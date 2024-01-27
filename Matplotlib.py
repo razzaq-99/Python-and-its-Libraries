@@ -285,16 +285,42 @@ import pandas as pd
                                                          
                                                          
                                                         # Plotting data from DataSet
-import matplotlib.pyplot as plt 
-import pandas as pd         
+# import matplotlib.pyplot as plt 
+# import pandas as pd         
 
-data = pd.read_excel("ESD.xlsx")
-df = pd.DataFrame(data) 
+# data = pd.read_excel("ESD.xlsx")
+# df = pd.DataFrame(data) 
 
 # dfx = df.groupby("Gender")["Annual Salary"].sum()
 
 # plt.hist(df["Annual Salary"],bins='auto')    
 
-plt.hist(df["Bonus %"],bins='auto',edgecolor="black",align='mid',color="orange")                
+# plt.hist(df["Bonus %"],bins='auto',edgecolor="black",align='mid',color="orange")                
 
-plt.show()                          
+# plt.show()                          
+
+
+
+
+
+
+
+
+
+
+ # Violin Plot Matplotlib 
+ 
+import matplotlib.pyplot as plt 
+
+x = [71,1,80,45,85,50,15,59,90,99,98,69,99]
+y = [39,20,10,40,12,44,38,6,17,18,28,30,60,99]
+# plt.violinplot(x)
+# plt.violinplot(x,showmedians=True)
+# plt.violinplot(x,showextrema=True)
+# plt.violinplot(x,showmeans=True,points=100,positions=[13])
+
+plt_values = [x,y]
+
+plt.violinplot(plt_values)
+
+plt.show()
