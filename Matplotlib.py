@@ -330,20 +330,57 @@ import pandas as pd
 
 # DataSET plotting
 
-import matplotlib.pyplot as plt 
-import pandas as pd 
+# import matplotlib.pyplot as plt 
+# import pandas as pd 
 
-data = pd.read_excel("ESD.xlsx")
+# data = pd.read_excel("ESD.xlsx")
 
-df = pd.DataFrame(data)
+# df = pd.DataFrame(data)
 
-print(df.head(10))
+# print(df.head(10))
 
-plt_values = [df["Bonus %"],df["Age"]]
+# plt_values = [df["Bonus %"],df["Age"]]
 
-plt.violinplot(plt_values)
+# plt.violinplot(plt_values)
 
 # plt.violinplot(df["Annual Salary"],showmedians=True)
   
 
-plt.show()
+# plt.show()
+
+
+
+                                              
+                                              
+                                                 # STEM PLOT 
+import matplotlib.pyplot as plt 
+import pandas as pd 
+
+# data = [20,30,40,50,60,70,80,90,99,90,80,70,60,50,40,30,20] 
+
+
+# plt.stem(data,linefmt="--",markerfmt="^",bottom=0,orientation="vertical")
+
+# plt.xlabel("Values")
+# plt.ylabel("Range")
+
+# plt.show()
+                                    
+
+
+
+
+# plotting DataSet
+
+data = pd.read_excel("ESD.xlsx")
+
+df = pd.DataFrame(data) 
+
+df2 = df.head(50)
+
+# plt.stem(df2["Age"],bottom=10)  
+plt.stem(df2["Annual Salary"]) 
+plt.title("Annual Salary of Employees",fontsize=20)
+plt.xlabel("No: of Employees",fontsize=15)
+plt.ylabel("Annual Salary",fontsize=15)
+plt.show()                                
