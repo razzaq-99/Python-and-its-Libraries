@@ -61,6 +61,7 @@ This repository contains Python code and some of the libraries of Python. It has
 - Hotel Bookings
 
 
+## Some Data Plotting Examples as Images:
 <img src = "https://github.com/razzaq-99/Python-and-its-Libraries/blob/master/box.png">
 <img src = "https://github.com/razzaq-99/Python-and-its-Libraries/blob/master/Pie.png">
 <img src = "https://github.com/razzaq-99/Python-and-its-Libraries/blob/master/Scatter.png">
