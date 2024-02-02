@@ -61,3 +61,7 @@ This repository contains Python code and some of the libraries of Python. It has
 - Hotel Bookings
 
 
+<img src = "https://github.com/razzaq-99/Python-and-its-Libraries/blob/master/box.png">
+<img src = "https://github.com/razzaq-99/Python-and-its-Libraries/blob/master/Pie.png">
+<img src = "https://github.com/razzaq-99/Python-and-its-Libraries/blob/master/Scatter.png">
+<img src = "https://github.com/razzaq-99/Python-and-its-Libraries/blob/master/Stem.png">
